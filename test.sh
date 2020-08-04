@@ -42,7 +42,7 @@ GOPATH=$HOME/go
 if [ $OS == "Ubuntu" ]; then
     GOROOT=/usr/local/go
     GO=$(which go)
-    if [ [ "$GO" == *"/snap"* ] ]; then
+    if [ [ "$GO" == *"snap"* ] ]; then
         GOROOT=/snap
     fi
 elif [ $OS == "Fedora" ]; then
