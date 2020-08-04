@@ -41,6 +41,10 @@ cp config/test/smfcfg.single.test.conf config/test/smfcfg.test.conf
 GOPATH=$HOME/go
 if [ $OS == "Ubuntu" ]; then
     GOROOT=/usr/local/go
+    GO=$(which go)
+    if [ [ "$GO" == *"/snap"* ] ]; then
+        GOROOT=/snap
+    fi
 elif [ $OS == "Fedora" ]; then
     GOROOT=/usr/lib/golang
 fi
